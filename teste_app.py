@@ -15,10 +15,10 @@ if st.button("Enviar Requisição"):
             response = requests.get(url)
             
         elif method == "POST":
-            respose = requests.post(url, json=eval (body) if body else ())
+            response = requests.post(url, json=eval(body) if body else {})
             
         elif method == "PUT":
-            response = requests.put(url, json=eval (body) if body else ())
+            response = requests.put(url, json=eval(body) if body else {})
         
         elif method == "DELETE":
             response = requests.delete(url)
